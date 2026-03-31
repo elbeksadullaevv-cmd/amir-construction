@@ -59,46 +59,19 @@
         transition: var(--transition);
       }
 
-      /* Logotip Dizayni */
-      .main-logo {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px 15px;
-        border: 2px solid var(--gold);
-        border-radius: 4px;
+      /* Faqat Yaponcha Matnli Logotip */
+      .brand-name {
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 24px; /* Matn o'lchami */
+        font-weight: 700;
+        color: var(--white);
+        letter-spacing: 2px;
         transition: var(--transition);
       }
 
-      .main-logo::before {
-        content: "A";
-        font-family: "Montserrat";
-        font-weight: 900;
-        font-size: 28px;
-        color: var(--black);
-        background: var(--gold);
-        padding: 0 8px;
-        margin-right: 10px;
-        border-radius: 2px;
-      }
-
-      .logo-text-brand {
-        font-family: "Montserrat";
-        font-size: 22px;
-        font-weight: 900;
-        color: var(--white);
-        letter-spacing: 2px;
-        text-transform: uppercase;
-      }
-
-      .logo-text-brand span {
+      .logo-container:hover .brand-name {
         color: var(--gold);
-      }
-
-      .logo-container:hover .main-logo {
-        background: rgba(197, 160, 40, 0.1);
-        transform: translateY(-2px);
+        transform: translateX(5px);
       }
 
       /* Language Switcher */
@@ -361,11 +334,9 @@
   </head>
   <body>
     <nav>
-      <!-- Yangi Logotip Qismi -->
       <a href="#" class="logo-container">
-        <div class="main-logo">
-          <div class="logo-text-brand">AMIR <span>GROUP</span></div>
-        </div>
+        <!-- Faqat Yaponcha Matn Qoldi -->
+        <div class="brand-name">アミル株式会社</div>
       </a>
 
       <button class="lang-switch" onclick="toggleLang()" id="langBtn">
@@ -593,8 +564,7 @@
               "
             >
               <strong>「日本品質を世界へ、新たな価値の創造」</strong><br />
-              AMIR
-              GROUPは、常に最高水準の品質を追求し、国境を越えた信頼を築くことで、社会の発展に貢献します。
+              AMIR GROUPは常に最高水準の品質を追求し、社会の発展に貢献します。
             </p>
           </div>
           <div>
@@ -635,7 +605,7 @@
 
     <div id="infoModal" class="modal" onclick="closeModal()">
       <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <span class="close-modal" onclick="closeModal()">×</span>
         <h2
           id="modalHeader"
           style="color: var(--gold); margin-bottom: 20px; font-weight: 900"
